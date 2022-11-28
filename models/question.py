@@ -1,10 +1,10 @@
 from typing import TypedDict
 
 from bson import ObjectId
+from pydantic import BaseModel
 
 
-class QuizzQuestion(TypedDict):
+class QuizzQuestion(BaseModel):
     _id: ObjectId
-    question: str
-    answer: str
+    statement: str
     yesno: bool
